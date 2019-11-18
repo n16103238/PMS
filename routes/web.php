@@ -34,3 +34,6 @@ Route::group(['middleware'=>['auth']],function(){
 Route::get('/dashboard/admin_dashboard', 'DashboardController@admin_dashboard')->name('admin_dashboard');
 Route::get('/salesman_dashboard', 'DashboardController@salesman_dashboard')->name('salesman_dashboard');
 Route::get('/denied', 'DashboardController@denied')->name('denied');
+
+//Medicine
+Route::get('/medicine/add_medicine', 'MedicineController@add_medicine')->name('add_medicine');

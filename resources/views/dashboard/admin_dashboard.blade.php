@@ -86,37 +86,38 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Employee</span>
+          <span>Pharmacist</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Personal Information</span></a>
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Contact Information</span></a>
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Emergacy Information</span></a>
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Salary Information</span></a>
+          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>View Prescription</span></a>
+          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Add Prescription</span></a>
+
         </div>
       </li>
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Others</span>
+          <span>Medicine</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Job Status</span></a>
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Job Position</span></a>
+          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Medicine List</span></a>
+          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Add Medicine</span></a>
         </div>
       </li>
 
 
-
-      <li class="nav-item">
-        <a class="nav-link" href=""><i class="fas fa-fw fa-folder"></i><span>Product</span></a>
-      </li>
-
       <li class="nav-item">
         <a class="nav-link" href=""><i class="fas fa-fw fa-folder"></i><span>Categories</span></a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href=""><i class="fas fa-fw fa-folder"></i><span>Employees</span></a>
+      </li>
     </ul>
+
+
+
 <!-- Sidebar end -->
 
 
@@ -132,7 +133,7 @@
       <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright BB ©  2019</span>
+            <span>Copyright N ©  2019</span>
           </div>
         </div>
       </footer>
