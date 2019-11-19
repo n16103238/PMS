@@ -31,9 +31,24 @@ Route::group(['middleware'=>['auth']],function(){
 
 
 //Dashboard
-Route::get('/dashboard/admin_dashboard', 'DashboardController@admin_dashboard')->name('admin_dashboard');
-Route::get('/salesman_dashboard', 'DashboardController@salesman_dashboard')->name('salesman_dashboard');
-Route::get('/denied', 'DashboardController@denied')->name('denied');
+//Route::get('/dashboard/admin_dashboard', 'DashboardController@admin_dashboard')->name('admin_dashboard');
+Route::get('/dashboard/salesman_dashboard', 'DashboardController@salesman_dashboard')->name('salesman_dashboard');
+Route::get('/dashboard/pharmacist_dashboard', 'DashboardController@pharmacist_dashboard')->name('pharmacist_dashboard');
+Route::get('/dashboard/cashier_dashboard', 'DashboardController@cashier_dashboard')->name('cashier_dashboard');
+
+
+//Invoice
+Route::get('/invoice/add_invoice', 'InvoiceController@add_invoice')->name('add_invoice');
+Route::get('/invoice/view_invoice', 'InvoiceController@view_invoice')->name('view_invoice');
+
 
 //Medicine
 Route::get('/medicine/add_medicine', 'MedicineController@add_medicine')->name('add_medicine');
+Route::get('/medicine/medicine_list', 'MedicineController@medicine_list')->name('medicine_list');
+Route::get('/medicine/medicine_category', 'MedicineController@medicine_category')->name('medicine_category');
+Route::get('/medicine/add_category', 'MedicineController@add_category')->name('add_category');
+
+//Pharmacist
+
+
+//Report

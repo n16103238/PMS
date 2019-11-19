@@ -16,7 +16,7 @@ public function salesman_dashboard()
   public function denied()
   {
       return view('auth.permissiondenied');
-  }  
+  }
 
 
 
