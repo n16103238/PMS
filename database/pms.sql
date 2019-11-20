@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2019 at 11:11 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Generation Time: Nov 20, 2019 at 04:54 PM
+-- Server version: 10.1.40-MariaDB
+-- PHP Version: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,7 +34,7 @@ CREATE TABLE `failed_jobs` (
   `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -45,7 +45,7 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `migrations` (
   `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -54,9 +54,11 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1);
+(1, '2014_10_12_100000_create_password_resets_table', 1),
+(2, '2019_08_19_000000_create_failed_jobs_table', 1),
+(3, '2019_11_19_075234_role', 1),
+(4, '2019_11_19_080409_users', 1),
+(5, '2019_11_19_083425_role_user', 1);
 
 -- --------------------------------------------------------
 
@@ -65,17 +67,55 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `password_resets` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `password_resets`
+-- Table structure for table `roles`
 --
 
-INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
-('admin@gmail.com', '$2y$10$7PGaDFDmBdm6br50gZ19N.IGAAqUlVMPJ4Ln/eSY48oPulpdJHGyy', '2019-11-17 00:10:29');
+CREATE TABLE `roles` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `roles`
+--
+
+INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'Admin', NULL, NULL),
+(2, 'Pharmacist', NULL, NULL),
+(3, 'Cashier', NULL, NULL),
+(4, 'Salesman', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `role_user`
+--
+
+CREATE TABLE `role_user` (
+  `role_id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `role_user`
+--
+
+INSERT INTO `role_user` (`role_id`, `user_id`, `created_at`, `updated_at`) VALUES
+(1, 4, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(1, 4, NULL, NULL),
+(2, 5, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -85,10 +125,10 @@ INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -99,7 +139,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$ecIbTHprzJwOwApyJC8RlOFGsJla0wIOYVZYGCXR3ELfgAYEJjshS', 'TyCiWlPXzQ61FgWBWo4wxWABgU8imIl7AhHr8y1AcA34V7QvKjgaXZW6vr1o', '2019-11-16 11:24:44', '2019-11-16 11:24:44');
+(4, 'A', 'aaa@gmail.com', NULL, '$2y$10$ya284zydXCGYPdLnsBpEo.zuV8C.4Z/PWmapZPruBtXPHQfJ2kuKe', 'FmjXxxistGtBwtoN0ds5UgrwGMlyfrbF3fSkN5y493UGqwLDQdLiqT7bgE5D', '2019-11-19 21:44:51', '2019-11-19 21:44:51'),
+(5, 'P', 'pharmacist@gmail.com', NULL, '$2y$10$5lob6LNsUYVWWNXQwbxfT.fXwT/M78s6fU7wUu.wO26rEW6vm4FFO', NULL, '2019-11-19 22:14:44', '2019-11-19 22:14:44'),
+(6, 's', 'salesman@gmail.com', NULL, '$2y$10$928BZHG1LYpoZll18e0EBupQrwRD30h1IFRsS81ANxFZ3KWJ.k4c2', NULL, '2019-11-19 22:20:24', '2019-11-19 22:20:24');
 
 --
 -- Indexes for dumped tables
@@ -124,6 +166,19 @@ ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
+-- Indexes for table `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `role_user`
+--
+ALTER TABLE `role_user`
+  ADD KEY `role_user_role_id_foreign` (`role_id`),
+  ADD KEY `role_user_user_id_foreign` (`user_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -144,13 +199,30 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `role_user`
+--
+ALTER TABLE `role_user`
+  ADD CONSTRAINT `role_user_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`),
+  ADD CONSTRAINT `role_user_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
