@@ -27,9 +27,17 @@ class LoginController extends Controller
       if($userRoles->contains('Admin')){
         return 'admin_dashboard';
       }
-      elseif($userRoles->contains('Farmacist')){
+      elseif($userRoles->contains('Parmacist')){
         return 'pharmacist_dashboard';
       }
+      elseif($userRoles->contains('Cashier')){
+        return 'cashier_dashboard';
+      }
+      elseif($userRoles->contains('Salesman')){
+        return 'salesman_dashboard';
+      }
+
+
       else{
         return 'login';
       }

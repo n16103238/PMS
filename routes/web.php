@@ -28,13 +28,23 @@ Route::group(['middleware'=>['auth']],function(){
     Route::get('/salesman_dashboard', 'DashboardController@salesman_dashboard')->name('salesman_dashboard');
   });
 });
+Route::group(['middleware'=>['auth']],function(){
+  Route::group(['middleware'=>['_pharmacist']],function(){
+    Route::get('/pharmacist_dashboard', 'DashboardController@pharmacist_dashboard')->name('pharmacist_dashboard');
+  });
+});
+Route::group(['middleware'=>['auth']],function(){
+  Route::group(['middleware'=>['_cashier']],function(){
+    Route::get('/cashier_dashboard', 'DashboardController@cashier_dashboard')->name('cashier_dashboard');
+  });
+});
 
 
 //Dashboard
 //Route::get('/dashboard/admin_dashboard', 'DashboardController@admin_dashboard')->name('admin_dashboard');
-Route::get('/dashboard/salesman_dashboard', 'DashboardController@salesman_dashboard')->name('salesman_dashboard');
-Route::get('/dashboard/pharmacist_dashboard', 'DashboardController@pharmacist_dashboard')->name('pharmacist_dashboard');
-Route::get('/dashboard/cashier_dashboard', 'DashboardController@cashier_dashboard')->name('cashier_dashboard');
+//Route::get('/dashboard/salesman_dashboard', 'DashboardController@salesman_dashboard')->name('salesman_dashboard');
+//Route::get('/dashboard/pharmacist_dashboard', 'DashboardController@pharmacist_dashboard')->name('pharmacist_dashboard');
+//Route::get('/dashboard/cashier_dashboard', 'DashboardController@cashier_dashboard')->name('cashier_dashboard');
 
 
 //Invoice
@@ -49,6 +59,8 @@ Route::get('/medicine/medicine_category', 'MedicineController@medicine_category'
 Route::get('/medicine/add_category', 'MedicineController@add_category')->name('add_category');
 
 //Pharmacist
-
+Route::get('/pharmacist/add_prescription', 'PharmacistController@add_prescription')->name('add_prescription');
+Route::get('/pharmacist/view_prescription', 'PharmacistController@view_prescription')->name('view_prescription');
 
 //Report
+//Route::get('/report/add_prescription', 'PharmacistController@add_prescription')->name('add_prescription');

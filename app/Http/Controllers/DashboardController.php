@@ -11,12 +11,26 @@ class DashboardController extends Controller
 
 public function salesman_dashboard()
   {
-      return view('Dashboard.salesman_dashboard');
+      return view('dashboard.salesman_dashboard');
   }
+
+public function pharmacist_dashboard()
+  {
+      return view('dashboard.pharmacist_dashboard');
+  }
+  public function cashier_dashboard()
+    {
+        return view('dashboard.cashier_dashboard');
+    }
+
+
+  /*
   public function denied()
   {
       return view('auth.permissiondenied');
-  }
+  }  */
+
+
 
 
 

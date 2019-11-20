@@ -26,6 +26,14 @@ class RedirectIfAuthenticated
           elseif($userRoles->contains('Salesman')){
             return redirect('salesman_dashboard');
           }
+          elseif($userRoles->contains('Pharmacist')){
+            return redirect('pharmacist_dashboard');
+          }
+          elseif($userRoles->contains('Cashier')){
+            return redirect('cashier_dashboard');
+          }
+        
+
           else{
             return redirect('login');
           }
