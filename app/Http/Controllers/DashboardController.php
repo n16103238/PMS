@@ -9,9 +9,9 @@ class DashboardController extends Controller
   }
 
 
-public function salesman_dashboard()
+public function manager_dashboard()
   {
-      return view('dashboard.salesman_dashboard');
+      return view('dashboard.manager_dashboard');
   }
 
 public function pharmacist_dashboard()

@@ -33,8 +33,8 @@ class LoginController extends Controller
       elseif($userRoles->contains('Cashier')){
         return 'cashier_dashboard';
       }
-      elseif($userRoles->contains('Salesman')){
-        return 'salesman_dashboard';
+      elseif($userRoles->contains('Manager')){
+        return 'manager_dashboard';
       }
 
 

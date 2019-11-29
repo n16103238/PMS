@@ -6,7 +6,7 @@ use Auth;
 
 use Closure;
 
-class CheckSalesman
+class CheckManager
 {
     /**
      * Handle an incoming request.
@@ -18,7 +18,7 @@ class CheckSalesman
     public function handle($request, Closure $next)
     {
       $userRoles = Auth::user()->roles->pluck('name');
-if($userRoles->contains('Salesman')){
+if($userRoles->contains('Manager')){
   return $next($request);
 }
 return redirect('login');

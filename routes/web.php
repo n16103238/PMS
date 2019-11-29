@@ -24,8 +24,8 @@ Route::group(['middleware'=>['auth']],function(){
   });
 });
 Route::group(['middleware'=>['auth']],function(){
-  Route::group(['middleware'=>['_salesman']],function(){
-    Route::get('/salesman_dashboard', 'DashboardController@salesman_dashboard')->name('salesman_dashboard');
+  Route::group(['middleware'=>['_manager']],function(){
+    Route::get('/manager_dashboard', 'DashboardController@manager_dashboard')->name('manager_dashboard');
   });
 });
 Route::group(['middleware'=>['auth']],function(){
@@ -42,7 +42,7 @@ Route::group(['middleware'=>['auth']],function(){
 
 //Dashboard
 //Route::get('/dashboard/admin_dashboard', 'DashboardController@admin_dashboard')->name('admin_dashboard');
-//Route::get('/dashboard/salesman_dashboard', 'DashboardController@salesman_dashboard')->name('salesman_dashboard');
+//Route::get('/dashboard/manager_dashboard', 'DashboardController@manager_dashboard')->name('manager_dashboard');
 //Route::get('/dashboard/pharmacist_dashboard', 'DashboardController@pharmacist_dashboard')->name('pharmacist_dashboard');
 //Route::get('/dashboard/cashier_dashboard', 'DashboardController@cashier_dashboard')->name('cashier_dashboard');
 

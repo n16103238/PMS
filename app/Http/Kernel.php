@@ -64,7 +64,7 @@ class Kernel extends HttpKernel
         '_admin' => \App\Http\Middleware\CheckAdmin::class,
         '_pharmacist' => \App\Http\Middleware\CheckPharmacist::class,
         '_cashier' => \App\Http\Middleware\CheckCashier::class,
-        '_salesman' => \App\Http\Middleware\CheckSalesman::class,
+        '_manager' => \App\Http\Middleware\CheckManager::class,
 
     ];
 
