@@ -73,23 +73,24 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Employee</span>
+          <span>Medicine</span>
         </a>
 
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href="login.html">Employee Information</a>
-          <a class="dropdown-item" href="register.html">Salary Information</a>
+          <a class="dropdown-item" href="login.html">Medicine List</a>
+          <a class="dropdown-item" href="register.html">Cost</a>
         </div>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="charts.html"><i class="fas fa-fw fa-chart-area"></i><span>Product</span></a>
+        <a class="nav-link" href="charts.html"><i class="fas fa-fw fa-chart-area"></i><span>Prescription</span></a>
+
       </li>
 
       <li class="nav-item">
         <a class="nav-link" href="tables.html">
           <i class="fas fa-fw fa-table"></i>
-          <span>Categories</span></a>
+          <span>Invoice</span></a>
       </li>
     </ul>
 <!-- Sidebar end -->

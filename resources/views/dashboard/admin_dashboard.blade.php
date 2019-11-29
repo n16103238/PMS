@@ -73,15 +73,27 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
 
+
+
+
+<!-- POS -->
+<li class="nav-item">
+  <a class="nav-link" href=""><i class="fas fa-fw fa-money"></i><span>POS</span></a>
+</li>
+
+
+
+
+
 <!-- pharmacist -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-folder"></i>
+          <i class="fas fa-fw fa-medkit"></i>
           <span>Pharmacist</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>View Prescription</span></a>
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Add Prescription</span></a>
+          <a class="dropdown-item" href=""><i class="fas fa-fw fa-plus-circle"></i><span>Add Prescription</span></a>
         </div>
       </li>
 
@@ -92,7 +104,7 @@
           <span>Invoice</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Add Invoice</span></a>
+          <a class="dropdown-item" href=""><i class="fas fa-fw fa-plus-circle"></i><span>Add Invoice</span></a>
           <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>View Invoice</span></a>
         </div>
       </li>
@@ -101,14 +113,14 @@
       <!-- Medicine -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-folder"></i>
+          <i class="fas fa-fw fa-medkit"></i>
           <span>Medicine</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Medicine List</span></a>
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Add Medicine</span></a>
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Medicine Category</span></a>
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Add Category</span></a>
+          <a class="dropdown-item" href=""><i class="fas fa-fw fa-medkit"></i><span>Add Medicine</span></a>
+          <a class="dropdown-item" href=""><i class="fas fa-fw fa-edit"></i><span>Medicine Category</span></a>
+          <a class="dropdown-item" href=""><i class="fas fa-fw fa-plus-circle"></i><span>Add Category</span></a>
         </div>
       </li>
       <!-- Medicine end -->
@@ -136,11 +148,19 @@
           <span>Report</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Sales Report</span></a>
+          <a class="dropdown-item" href=""><i class=" fas fa-fw fa-folder"></i><span>Sales Report</span></a>
           <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Purchase Report</span></a>
           <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>Profit/Loss</span></a>
         </div>
       </li>
+
+      <!-- Profile -->
+
+      <li class="nav-item">
+        <a class="nav-link" href=""><i class="fas fa-fw fa-folder"></i><span>Profile</span></a>
+      </li>
+
+
     </ul>
 
 
