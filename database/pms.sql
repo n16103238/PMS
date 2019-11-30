@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2019 at 04:54 PM
--- Server version: 10.1.40-MariaDB
--- PHP Version: 7.3.5
+-- Generation Time: Nov 29, 2019 at 09:01 AM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,7 +34,7 @@ CREATE TABLE `failed_jobs` (
   `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -113,9 +113,10 @@ CREATE TABLE `role_user` (
 --
 
 INSERT INTO `role_user` (`role_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 4, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(1, 4, NULL, NULL),
-(2, 5, NULL, NULL);
+(1, 1, NULL, NULL),
+(2, 2, NULL, NULL),
+(3, 3, NULL, NULL),
+(4, 4, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -139,9 +140,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(4, 'A', 'aaa@gmail.com', NULL, '$2y$10$ya284zydXCGYPdLnsBpEo.zuV8C.4Z/PWmapZPruBtXPHQfJ2kuKe', 'FmjXxxistGtBwtoN0ds5UgrwGMlyfrbF3fSkN5y493UGqwLDQdLiqT7bgE5D', '2019-11-19 21:44:51', '2019-11-19 21:44:51'),
-(5, 'P', 'pharmacist@gmail.com', NULL, '$2y$10$5lob6LNsUYVWWNXQwbxfT.fXwT/M78s6fU7wUu.wO26rEW6vm4FFO', NULL, '2019-11-19 22:14:44', '2019-11-19 22:14:44'),
-(6, 's', 'salesman@gmail.com', NULL, '$2y$10$928BZHG1LYpoZll18e0EBupQrwRD30h1IFRsS81ANxFZ3KWJ.k4c2', NULL, '2019-11-19 22:20:24', '2019-11-19 22:20:24');
+(1, 'A', 'aa@gmail.com', NULL, '$2y$10$b5rfOC9TCOV.qnpriCJdGu2jmNfawTeuWmsiFvxDKuOAMzelTdcuC', NULL, '2019-11-22 03:13:29', '2019-11-22 03:13:29'),
+(2, 'P', 'pp@gmail.com', NULL, '$2y$10$E7mr7vbv4/lOKSUkmQ7oe.l94Qy2jwvFaWRCOX9TnL8NKM00xFhme', NULL, '2019-11-22 03:18:25', '2019-11-22 03:18:25'),
+(3, 'C', 'cc@gmail.com', NULL, '$2y$10$AbGX7CMigBn8kkyaSu9LyOKDC1Sy1GiPC69VY/gQDJ.gxMmeQRbXu', NULL, '2019-11-22 03:22:43', '2019-11-22 03:22:43'),
+(4, 'S', 'ss@gmail.com', NULL, '$2y$10$4EGuzwJdiD7IolfSu.3GweCpiAE26ASgaSC0V2vtDcTdKw.cKVKiC', NULL, '2019-11-22 03:23:21', '2019-11-22 03:23:21');
 
 --
 -- Indexes for dumped tables
@@ -211,7 +213,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

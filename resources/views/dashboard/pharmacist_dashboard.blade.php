@@ -63,31 +63,59 @@
       </li>
 
     </ul>
-    <!-- Navbar end -->
+<!-- Navbar end -->
   </nav>
 
   <div id="wrapper">
 
-    <!-- Sidebar -->
+<!-- Sidebar -->
     <ul class="sidebar navbar-nav">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Prescription</span>
-        </a>
 
-        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href="login.html">Add Prescription</a>
-          <a class="dropdown-item" href="register.html">View Prescription</a>
-        </div>
+<!-- POS -->
+      <li class="nav-item">
+        <a class="nav-link" href=""><i class="far fa-money-bill-alt"></i>
+          <span>POS</span></a>
       </li>
 
+<!-- Prescription -->
+
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-fw fa-folder"></i>
+    <span>Prescription</span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+    <a class="dropdown-item" href=""><i class="fas fa-fw fa-plus-circle"></i>
+      <span>Add Prescription</span></a>
+    <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>View Prescription list</span></a>
+  </div>
+</li>
+<!-- Medicine List -->
       <li class="nav-item">
         <a class="nav-link" href="charts.html"><i class="fas fa-fw fa-chart-area"></i><span>Medicine List</span></a>
 
       </li>
 
-      
+  <!-- Invoice -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Invoice</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+          <a class="dropdown-item" href=""><i class="fas fa-fw fa-plus-circle"></i>
+            <span>Add Invoice</span></a>
+          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
+            <span>View Invoice</span></a>
+        </div>
+      </li>
+
+      <!-- All Sales -->
+            <li class="nav-item">
+              <a class="nav-link" href=""><i class="fas fa-cart-plus"></i>
+                <span>All Sales</span></a>
+            </li>
+
     </ul>
 <!-- Sidebar end -->
 
@@ -102,7 +130,7 @@
       <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright BB ©  2019</span>
+            <span>Copyright N ©  2019</span>
           </div>
         </div>
       </footer>
