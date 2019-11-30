@@ -8,9 +8,6 @@ class DashboardController extends Controller
       return view('dashboard.admin_dashboard');
   }
 
-
-
-
 public function pharmacist_dashboard()
   {
       return view('dashboard.pharmacist_dashboard');

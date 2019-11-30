@@ -30,7 +30,7 @@ class LoginController extends Controller
       elseif($userRoles->contains('Parmacist')){
         return 'pharmacist_dashboard';
       }
-  
+
 
 
       else{
