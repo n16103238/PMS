@@ -1,7 +1,6 @@
 @extends('Dashboard.admin_dashboard')
 
 @section('content')
-
 <!-- page start-->
         <section class="panel">
             <h1>
@@ -15,19 +14,20 @@
                         <div class="col-md-6">
                             <section class="panel">
                                 <div class="panel-body">
-          <form role="form" action="admin/medicine/add_category" method="post" enctype="multipart/form-data">
+                                  <form  action="{{ route('create_category') }}" method="POST">
+                                      @csrf
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Category</label>
-                                            <input type="text" class="form-control" name="category" value='' placeholder="Enter Category Name">
+                                            <label for="exampleInputEmail1">Name</label>
+                                            <input type="text" class="form-control" name="name" >
                                         </div>
                                         <div class="form-group">
                                             <label>Description</label>
-                                            <textarea class="form-control" name="description"  value='' placeholder="Enter Short Description">
+                                            <textarea class="form-control" name="description">
                                             </textarea>
                                         </div>
 
                                         <button type="submit" name="submit" class="btn btn-info"> Submit</button>
-          </form>
+                                      </form>
                                 </div>
                             </section>
                         </div>
