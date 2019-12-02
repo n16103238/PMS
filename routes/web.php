@@ -44,14 +44,10 @@ Route::get('/invoice/view_invoice', 'InvoiceController@view_invoice')->name('vie
 
 
 //Medicine
-Route::get('/medicine_list', 'MedicineController@medicine_list')->name('medicine_list');
 Route::get('/add_medicine', 'MedicineController@add_medicine')->name('add_medicine');
-Route::post('/add_medicine', 'MedicineController@create_medicine')->name('create_medicine');
-
-//Category
+Route::get('/medicine_list', 'MedicineController@medicine_list')->name('medicine_list');
 Route::get('/medicine_category', 'MedicineController@medicine_category')->name('medicine_category');
 Route::get('/add_category', 'MedicineController@add_category')->name('add_category');
-Route::post('/create_category', 'MedicineController@create')->name('create_category');
 
 //Pharmacist
 Route::get('/pharmacist/add_prescription', 'PharmacistController@add_prescription')->name('add_prescription');

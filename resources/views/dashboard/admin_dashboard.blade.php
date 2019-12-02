@@ -48,7 +48,7 @@
 
       <li class="nav-item dropdown">
           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-              {{ Auth::user()->name }} <span class="create"></span>
+              {{ Auth::user()->name }} <span class="caret"></span>
           </a>
 
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -98,11 +98,11 @@
               <span>Medicine</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-              <a class="dropdown-item" href="{{route('medicine_list')}}"><i class="fas fa-fw fa-folder"></i>
+              <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
                 <span>Medicine List</span></a>
-              <a class="dropdown-item" href="{{route('add_medicine')}}"><i class="fas fa-fw fa-medkit"></i>
+              <a class="dropdown-item" href=""><i class="fas fa-fw fa-medkit"></i>
                 <span>Add Medicine</span></a>
-
+            
             </div>
           </li>
       <!-- Medicine end -->
@@ -114,9 +114,9 @@
               <span>Medicine Category</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-              <a class="dropdown-item" href="{{ route('medicine_category' ) }}"><i class="fas fa-fw fa-edit"></i>
-                <span>Category List</span></a>
-              <a class="dropdown-item" href="{{ route('add_category' ) }}"><i class="fas fa-fw fa-plus-circle"></i>
+              <a class="dropdown-item" href=""><i class="fas fa-fw fa-edit"></i>
+                <span>Medicine Category</span></a>
+              <a class="dropdown-item" href=""><i class="fas fa-fw fa-plus-circle"></i>
                 <span>Add Category</span></a>
             </div>
           </li>
@@ -172,24 +172,6 @@
 
       <div class="container-fluid">
         <div class="container">
-          @if(session()->get('success'))
-            <div class="alert alert-success">
-              {{ session()->get('success') }}
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <br />
-          @endif
-          @if(session()->get('warning'))
-            <div class="alert alert-danger">
-              {{ session()->get('warning') }}
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <br />
-          @endif
             @yield('content')
         </div>
 <!--  Footer -->
