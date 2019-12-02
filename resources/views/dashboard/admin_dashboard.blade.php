@@ -102,7 +102,7 @@
                 <span>Medicine List</span></a>
               <a class="dropdown-item" href=""><i class="fas fa-fw fa-medkit"></i>
                 <span>Add Medicine</span></a>
-            
+
             </div>
           </li>
       <!-- Medicine end -->
